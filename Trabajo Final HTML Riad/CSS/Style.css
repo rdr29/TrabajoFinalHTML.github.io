@@ -1,0 +1,223 @@
+.logoP1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 16px 5%;
+    background: #e9f2ec;
+}
+
+.logoPP {
+    width: 100px;
+    height: auto;
+}
+
+.logoPPs {
+    width: auto;
+    height: 52px;
+}
+
+.title1 {
+    margin: 0;
+    color: var(--green-dark);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+}
+
+.historia,
+.consejos,
+.porque-section {
+    margin: 0 auto 24px;
+    padding: clamp(18px, 3vw, 30px);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+}
+
+.historia {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-areas:
+        "title title"
+        "intro timeline"
+        "values timeline";
+    gap: 20px;
+    align-items: start;
+    background: #e9f2ec;
+}
+
+.historia > h2 {
+    grid-area: title;
+    margin: 0;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.res1,
+.trayectoria,
+.valores {
+    min-width: 0;
+    padding: 20px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--white);
+    box-shadow: 0 4px 14px rgba(23, 59, 58, 0.05);
+    text-align: left;
+}
+
+.res1 {
+    grid-area: intro;
+}
+
+.trayectoria {
+    grid-area: timeline;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.valores {
+    grid-area: values;
+}
+
+.porque-section {
+    background: #edf3f1;
+}
+
+.res1 p,
+.valores p {
+    color: var(--muted);
+}
+
+.trayectoria h3,
+.valores h3 {
+    margin: 0 0 12px;
+    color: var(--green-dark);
+}
+
+.porque-intro {
+    margin: 0 0 16px;
+    color: var(--muted);
+}
+
+.porque-lista {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.porque-lista li {
+    display: grid;
+    align-content: start;
+    gap: 5px;
+    padding: 14px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--white);
+}
+
+.porque-lista strong {
+    color: var(--green-dark);
+}
+
+.porque-lista span {
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+.comienzo {
+    margin: 0;
+    padding: 12px 14px;
+    border-left: 3px solid var(--green);
+    border-radius: 8px;
+    background: #f3f7f3;
+    color: var(--muted);
+}
+
+.comienzo strong {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--ink);
+}
+
+.comienzo .anio {
+    display: inline-block;
+    margin-bottom: 6px;
+    color: var(--green);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.consejos {
+    background: #e8f1f0;
+}
+
+.consejos h2 {
+    margin-top: 0;
+}
+
+.porque-section h2 {
+    margin: 0 0 8px;
+}
+
+.consejos ul {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.consejos li {
+    padding: 16px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--white);
+    color: var(--muted);
+}
+
+body > footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 22px 5%;
+    background: var(--green-dark);
+    color: var(--white);
+    text-align: center;
+}
+
+body > footer p {
+    margin: 0;
+}
+
+@media (max-width: 850px) {
+    .consejos ul,
+    .porque-lista {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .historia {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas:
+            "title"
+            "intro"
+            "values"
+            "timeline";
+    }
+
+    .consejos ul,
+    .porque-lista {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    body > footer {
+        flex-direction: column;
+    }
+}

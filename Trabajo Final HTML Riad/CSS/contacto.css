@@ -1,0 +1,111 @@
+.contacto-intro {
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.contacto-intro .eyebrow {
+    margin: 0;
+    color: var(--green);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.contacto-intro h1 {
+    margin: 6px 0;
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.contacto-intro > p:last-child {
+    margin: 0;
+    color: var(--muted);
+}
+
+.contacto-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.contacto-card {
+    min-width: 0;
+    padding: 24px;
+    border: 1px solid var(--line);
+    border-top: 4px solid var(--green);
+    border-radius: 16px;
+    background: var(--white);
+    box-shadow: 0 4px 14px rgba(23, 59, 58, 0.05);
+}
+
+.contacto-card:nth-child(2) {
+    border-top-color: #397b7b;
+    background: #e8f1f0;
+}
+
+.contacto-card:nth-child(3) {
+    border-top-color: #547e64;
+    background: #edf2e8;
+}
+
+.contacto-icono {
+    display: grid;
+    width: 46px;
+    height: 46px;
+    place-items: center;
+    border-radius: 13px;
+    background: #e9f2ec;
+    color: var(--green-dark);
+    font-size: 1.35rem;
+}
+
+.contacto-card h2 {
+    margin: 16px 0 6px;
+    font-size: 1.15rem;
+}
+
+.contacto-card p {
+    min-height: 3.2em;
+    margin: 0 0 12px;
+    color: var(--muted);
+}
+
+.contacto-card a {
+    color: var(--green-dark);
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.contacto-card a:hover,
+.contacto-card a:focus-visible {
+    color: var(--green);
+}
+
+@media (max-width: 850px) {
+    .contacto-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    .contacto-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+    }
+
+    .contacto-card p {
+        min-height: 0;
+    }
+}
+
+
+.mapa{
+    margin-top: 28px;
+    border: 4px solid var(--line);
+    border-radius: 16px;
+}
+
+.mapa-embed{
+    border: 1px solid var(--line);
+    border-radius: 16px;
+}

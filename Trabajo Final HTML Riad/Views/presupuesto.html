@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Presupuestos - Solara Tech</title>
+    <link rel="stylesheet" href="../CSS/presupuesto.css">
+    <link rel="stylesheet" href="../CSS/comun.css">
+</head>
+<body>
+    <header>
+        <nav class="bnavegacion" aria-label="Navegación principal">
+            <a href="Index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="presupuesto.html" aria-current="page">Presupuesto</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+    <main>
+
+        <section class="FormularioPresupuesto">
+        <form action="/enviar" method="POST" class="SolicitarPresupuesto">
+            <h2>Solicitar Presupuesto</h2>
+
+            <div class="campo">
+                <label for="nombre">Nombre completo *</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+            </div>
+
+            <div class="campo">
+                <label for="email">Correo electrónico *</label>
+                <input type="email" id="email" name="email" placeholder="nombre@correo.com" required>
+            </div>
+
+            <div class="campo">
+                <label for="codigo">Codigo Presupuesto (Solo si desea renegociar un presupuesto)</label>
+                <input type="text" id="codigo" name="codigo" placeholder="Si dispone de un codigo de presupuesto" maxlength="6">
+            </div>
+
+            <div class="campo">
+                <label for="teléfono">Teléfono</label>
+                <input type="tel" id="teléfono" name="teléfono" maxlength="9"  placeholder="+34 600 000 000">
+            </div>
+
+            <div class="campo">
+                <label for="interes">¿En qué estás interesado?</label>
+                <select id="interes" name="interes">
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option value="paneles">Paneles solares</option>
+                    <option value="baterias">Baterías de almacenamiento</option>
+                    <option value="cargadoresc">Cargadores eléctricos</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="montaje">¿Desea Montaje?</label>
+                <select id="montaje" name="montaje">
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option value="si">SI</option>
+                    <option value="no">NO</option>
+                </select>
+            </div>
+
+            <div class="campo campo-mensaje">
+                <label for="mensaje">¿Desea hacernos saber algo mas?</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu consulta aquí..." required></textarea>
+            </div>
+
+            <div class="campo-checkbox">
+                <input type="checkbox" id="privacidad" name="privacidad" required>
+                <label for="privacidad">Acepto la política de privacidad</label>
+            </div>
+
+            <button type="submit" class="boton-enviar">Enviar peticion</button>
+        </form>
+        </section>
+    </main>
+
+    <footer>
+        <img src="../Assets/img/LogoPP.png" alt="Solara Tech" class="logoPPs">
+        <p>&COPY;Solara Tech. Todos los derechos reservados </p>
+    </footer>
+</body>
+</html>
