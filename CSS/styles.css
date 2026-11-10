@@ -193,6 +193,40 @@ body > footer p {
     margin: 0;
 }
 
+.footer-redes {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-redes a {
+    display: grid;
+    width: 38px;
+    height: 38px;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-redes a:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.22);
+}
+
+.footer-redes a:focus-visible {
+    outline: 2px solid var(--white);
+    outline-offset: 3px;
+}
+
+.footer-redes svg {
+    width: 19px;
+    height: 19px;
+    fill: currentColor;
+}
+
 @media (max-width: 850px) {
     .consejos ul,
     .porque-lista {
